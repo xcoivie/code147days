@@ -7,7 +7,9 @@
 
 * Consuming the Embeded State, Dynamic UI, ReactComponent 
 
-
+* Consuming JSX = JavaScript + Xml
+** Input (JSX) ==> Output (JS)
+** HTML Tags vs. React Components
 
 *************************************
 * React is a JavaScript library for building user interfaces.

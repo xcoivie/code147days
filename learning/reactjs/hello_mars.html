@@ -6,23 +6,22 @@
 </head>
 <body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.min.js"></script>
-	<script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+	<script type="text/jsx">
     // declare a react component
-	  var helloComponent = React.createClass({
-			render:function(){
-				return React.createElement('div', {className: 'helloMars'}, 'Hello ', this.props.name, '!');
+	  var HelloComponent = React.createClass({
+			render(){
+				return <div className='helloMars'> Hello {this.props.name}!</div>;
 			}      
 		});
 
 	  // declare a react element
-		var	helloElement = React.createElement(helloComponent, {name: ' Supper Mars'});
+		var	helloElement = React.createElement(HelloComponent, {name: ' Supper Mars'});
 
-		//use React.render to render ReactElement helloMars 
-    // ==> add to DOM document.body 
-    // ==> display it as HTML
+		//use React.render to render ReactElement helloMars     
 		React.render(
-			helloElement      // ReactElement
-			, document.body   // Parent DOM of helloMars (div)
+			helloElement
+			, document.body
 	  );
 	</script>
 </body>
