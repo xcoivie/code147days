@@ -7,18 +7,23 @@
 <body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.min.js"></script>
 	<script>
-	    // declare a react element
-		var	helloMars = React.createElement(
-			'div'                           // type
-			, {className: 'helloMars'}      // , props
-			, 'Hello Mars!'                 // , childrens args
-			);
+    // declare a react component
+	  var helloComponent = React.createClass({
+			render:function(){
+				return React.createElement('div', {className: 'helloMars'}, 'Hello ', this.props.name, '!');
+			}      
+		});
 
-		//use React.render to render ReactElement helloMars ==> add to DOM document.body ==> display it as HTML
+	  // declare a react element
+		var	helloElement = React.createElement(helloComponent, {name: ' Supper Mars'});
+
+		//use React.render to render ReactElement helloMars 
+    // ==> add to DOM document.body 
+    // ==> display it as HTML
 		React.render(
-			helloMars         // ReactElement
+			helloElement      // ReactElement
 			, document.body   // Parent DOM of helloMars (div)
-			);
+	  );
 	</script>
 </body>
 </html>

@@ -5,6 +5,10 @@
 ** React.render
 *** Api Link: https://facebook.github.io/react/docs/top-level-api.html#react.createelement
 
+* Consuming the Embeded State, Dynamic UI, ReactComponent 
+
+
+
 *************************************
 * React is a JavaScript library for building user interfaces.
 
