@@ -5,6 +5,38 @@
 	<title>Example Props #day2</title>
 </head>
 <body>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+	<script type="text/jsx">
+  var Avatar = React.createClass({  
+    propTypes:{
+      name: React.PropTypes.string.isRequired,
+      width: React.PropTypes.number.isRequired,
+      height: React.PropTypes.number.isRequired
+    },
 
+    render(){
+      var src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xft1/v/t1.0-1/p160x160/12799203_1290890124259493_1355432999189299752_n.jpg?oh=e8d73a549d843aa456b9131d6ff0c9c8&oe=574FF2EB&__gda__=1466074990_9763d360ff9365f399cb85690c9720eb';
+      return(
+        <div>
+          <img src={src} width={this.props.width} height={this.props.height} alt="alt" />
+          <span>{this.props.name}</span>
+        </div>
+      );
+    }
+  });
+
+  var AvatarElement = <Avatar name="Xuan" width={100} height={100} />;
+
+  var AvatarComponent = React.render(AvatarElement, document.body);
+
+  AvatarComponent.setProps({name:'Minh'}, function(){
+    alert('Props is set.');
+  });
+
+  AvatarComponent.replaceProps({name: "Minh-XM"}, function(){
+    alert("Props is replaced.");
+  })
+	</script>
 </body>
 </html>

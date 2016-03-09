@@ -1,4 +1,6 @@
-﻿* Consuming the React.Element -ref #day1 #coding147days
+﻿#Day1 ____________________
+
+* Consuming the React.Element -ref #day1 #coding147days
 ** React.Component
 ** React.createClass
 ** React.createElement 
@@ -17,3 +19,10 @@
 ** Just the UIit out on a small feature in an existing project.
 ** Virtual DOM
 ** Data flow
+
+#Day2 ____________________
+
+* props
+** Proptypes
+** Prop value default
+** setProps, replaceProps
