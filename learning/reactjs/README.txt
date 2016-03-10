@@ -26,3 +26,11 @@
 ** Proptypes
 ** Prop value default
 ** setProps, replaceProps
+* state
+** props & state
+*** Same
+     both are 'plain JS Object', trigger to 'render update' changing.
+*** Diff
+     STATE cannot change by Parent component, but PROPS can.
+     PROPS cannot change inside the component, but STATE can.
+     STATE cannot change in child component, but  PROPS can.
